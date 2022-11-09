@@ -6,7 +6,7 @@ namespace GithubActionsLab
     [TestFixture]
     public class Math
     {
-        [Test]
+        [TestGunderson]
         public void Add_Valid()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
@@ -14,7 +14,7 @@ namespace GithubActionsLab
             Assert.AreEqual(12, Program.Add("5", "7"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Add_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
@@ -22,7 +22,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Add("a", "a"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Add_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
@@ -30,7 +30,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
         
-        [Test]
+        [TestGunderson]
         public void Subtract_Valid()
         {
             Assert.AreEqual(1, Program.Subtract("3","2"));
@@ -38,7 +38,7 @@ namespace GithubActionsLab
             Assert.AreEqual(9, Program.Subtract("15", "6"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Subtract_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
@@ -47,7 +47,7 @@ namespace GithubActionsLab
 
         }
 
-        [Test]
+        [TestGunderson]
         public void Subtract_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
@@ -55,7 +55,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
         }
 
-        [Test]
+        [TestGunderson]
         public void Multiply_Valid()
         {
             Assert.AreEqual(4, Program.Multiply("1","4"));
@@ -63,7 +63,7 @@ namespace GithubActionsLab
             Assert.AreEqual(35, Program.Multiply("5", "7"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Multiply_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
@@ -71,7 +71,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Multiply_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
@@ -79,7 +79,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
         }
 
-        [Test]
+        [TestGunderson]
         public void Divide_Valid()
         {
             Assert.AreEqual(3, Program.Divide("3", "1"));
@@ -87,7 +87,7 @@ namespace GithubActionsLab
             Assert.AreEqual(5, Program.Divide("20", "4"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Divide_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
@@ -95,7 +95,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Divide("a", "a"));
         }
 
-        [Test]
+        [TestGunderson]
         public void Divide_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
